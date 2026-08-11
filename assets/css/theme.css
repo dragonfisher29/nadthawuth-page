@@ -145,6 +145,18 @@ section {
   color: var(--accent);
 }
 
+.btn-accent {
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  color: var(--accent-text);
+}
+
+.btn-accent:hover {
+  background: var(--accent);
+  color: var(--btn-primary-text);
+  transform: translateY(-2px);
+}
+
 .btn-sm {
   padding: 8px 14px;
   font-size: 0.8125rem;
@@ -157,10 +169,6 @@ section {
   border: 1px solid var(--border);
   border-radius: 8px;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-hover:hover {
-  border-color: var(--accent);
 }
 
 .card-lift:hover {
