@@ -287,5 +287,29 @@ window.RESUME_CONSTANTS = {
   /* ==========================================================
    * DOMAIN INFO — shared business info
    * ========================================================== */
-  domainNote: "Domain names (.com, .my, etc.) are purchased and renewed directly by you through a third-party registrar (e.g., Namecheap or Exabytes). We will assist with domain setup and linking at no additional charge."
+  domainNote: "Domain names (.com, .my, etc.) are purchased and renewed directly by you through a third-party registrar (e.g., Namecheap or Exabytes). We will assist with domain setup and linking at no additional charge.",
+
+  /* ==========================================================
+   * DEMOS — listing page data
+   * snapshot: relative path to image file in the repository
+   *   (e.g. "assets/images/demos/menu-qr.png")
+   * ========================================================== */
+  demos: [
+    {
+      title: "Digital Menu / QR Page",
+      category: "Package 02",
+      description: "Selera Kitchen",
+      tech: ["HTML", "Tailwind CSS", "Responsive Design"],
+      snapshot: "assets/images/demos/seleraKitchen.png",
+      demoUrl: "https://demo1-fnb.nadthawuth.workers.dev/"
+    },
+    {
+      title: "Business Website",
+      category: "Package 02",
+      description: "SparkleCleanMY",
+      tech: ["Next.js", "Tailwind CSS", "Contact Form"],
+      snapshot: "assets/images/demos/sparkleCleanMY.png",
+      demoUrl: "https://demo1-service.nadthawuth.workers.dev/"
+    },
+  ]
 };

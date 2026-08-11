@@ -48,7 +48,12 @@ window.SITE_CONFIG = {
    * ---------------------------------------------------------- */
   packages: R.packages,
   addons: R.addons,
-  domainNote: R.domainNote
+  domainNote: R.domainNote,
+
+  /* ----------------------------------------------------------
+   * DEMOS — listing page
+   * ---------------------------------------------------------- */
+  demos: R.demos
 };
 
 /* ============================================================
@@ -66,7 +71,9 @@ window.SITE_CONFIG.whatsappLink = function () {
 
   function activePage() {
     var p = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
-    return p === "business.html" ? "business.html" : "index.html";
+    if (p === "business.html") return "business.html";
+    if (p === "demos.html") return "demos.html";
+    return "index.html";
   }
 
   function navLinkItem(href, label, active) {
@@ -86,7 +93,8 @@ window.SITE_CONFIG.whatsappLink = function () {
 
     var linkItems =
       navLinkItem("index.html", "About Me", active === "index.html") +
-      navLinkItem("business.html", "Services", active === "business.html");
+      navLinkItem("business.html", "Services", active === "business.html") +
+      navLinkItem("demos.html", "Demos", active === "demos.html");
 
     var cta =
       '<a href="' + wa + '" target="_blank" rel="noopener" class="btn btn-primary btn-sm ml-2">Contact</a>';
@@ -187,6 +195,7 @@ window.SITE_CONFIG.whatsappLink = function () {
       '<div class="space-y-2">' +
       '<a href="index.html" class="' + footLink + '">About Me</a>' +
       '<a href="business.html" class="' + footLink + '">Services</a>' +
+      '<a href="demos.html" class="' + footLink + '">Demos</a>' +
       "</div></div>" +
 
       /* Connect */
