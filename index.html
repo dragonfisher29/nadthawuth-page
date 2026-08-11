@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nadthawuth Ketnukkunn — Software Engineering Portfolio</title>
+    <meta name="description" content="Portfolio & resume of Nadthawuth Ketnukkunn — BSc Computer Science student at the University of Southampton. Full-stack development, adversarial search, cloud-native architecture, and cybersecurity.">
+
+    <!-- Apply saved theme before first paint (no flash of wrong theme) -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <!-- Top Accent Bar -->
+    <div class="h-1 bg-gradient-to-r from-[var(--accent)] via-[var(--accent-text)] to-[var(--terminal-green)] fixed top-0 inset-x-0 z-50"></div>
+
+    <!-- Shared Navigation (rendered by site-config.js) -->
+    <div id="site-nav"></div>
+
+    <main class="flex-grow">
+
+        <!-- ================= HERO ================= -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-16">
+            <div class="max-w-3xl">
+                <p class="mono-muted mb-4">~/nadthawuth/portfolio $ whoami</p>
+
+                <div class="flex items-center gap-2 mb-5">
+                    <span class="inline-flex items-center gap-2 font-mono text-xs font-semibold text-[var(--terminal-green)] border border-[var(--terminal-green)]/40 rounded px-3 py-1.5 bg-[var(--terminal-green)]/10">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--terminal-green)] opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[var(--terminal-green)]"></span>
+                        </span>
+                        Available for internships — Summer 2026
+                    </span>
+                </div>
+
+                <h1 class="text-[2.5rem] sm:text-5xl font-bold leading-[1.2] tracking-tight text-[var(--text-primary)]">
+                    Nadthawuth <span class="gradient-text">Ketnukkunn</span>
+                </h1>
+
+                <p class="font-mono text-base sm:text-lg font-semibold text-[var(--accent-text)] mt-3">
+                    BSc Computer Science @ University of Southampton
+                </p>
+
+                <p class="text-base text-[var(--text-secondary)] leading-relaxed mt-4 max-w-2xl">
+                    Building scalable backend systems and intelligent web applications. Strong foundations in
+                    full-stack development, adversarial search algorithms, and cloud-native architecture —
+                    with a growing interest in cybersecurity.
+                </p>
+
+                <div class="flex flex-wrap gap-3 mt-8">
+                    <a href="#" id="resume-download" download class="btn btn-primary">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3"/></svg>
+                        Download Resume PDF
+                    </a>
+                    <a href="#" id="github-link" target="_blank" rel="noopener" class="btn btn-outline">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                        View GitHub
+                    </a>
+                    <a href="#" id="linkedin-link" target="_blank" rel="noopener" class="btn btn-outline">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 11-.001-4.124 2.062 2.062 0 010 4.124zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                        LinkedIn
+                    </a>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 mt-8 font-mono text-xs text-[var(--text-secondary)]">
+                    <a href="mailto:nadthawuth@gmail.com" id="hero-email" class="hover:text-[var(--accent)] transition-colors">nadthawuth@gmail.com</a>
+                    <span class="hidden sm:inline text-[var(--border)]">|</span>
+                    <a href="tel:+447733529901" id="hero-phone" class="hover:text-[var(--accent)] transition-colors">+44 7733 529 901</a>
+                    <span class="hidden sm:inline text-[var(--border)]">|</span>
+                    <span id="hero-location">Southampton, UK</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TERMINAL / CORE STATS ================= -->
+        <section class="bg-[var(--bg-tertiary)] border-y border-[var(--border)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+                <div class="space-y-2 mb-10">
+                    <p class="section-eyebrow">// core stats</p>
+                    <h2 class="text-[1.75rem] font-semibold leading-[1.3] text-[var(--text-primary)]">Current Status</h2>
+                </div>
+                <div class="grid lg:grid-cols-[1fr_1.5fr] gap-8 items-center">
+
+                    <!-- Quick summary -->
+                    <dl id="core-stats" class="space-y-5"></dl>
+
+                    <!-- Mock terminal -->
+                    <div class="terminal" role="img" aria-label="Mock terminal showing open to internship status, current languages, and focus areas">
+                        <div class="terminal-titlebar">
+                            <span class="terminal-dot" style="background:#ff5f56"></span>
+                            <span class="terminal-dot" style="background:#ffbd2e"></span>
+                            <span class="terminal-dot" style="background:#27c93f"></span>
+                            <span class="ml-3 text-xs text-[#8b949e]">nadthawuth@portfolio: ~/profile</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-body"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FEATURED PROJECTS ================= -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+            <div class="space-y-2 mb-10">
+                <p class="section-eyebrow">// selected work</p>
+                <h2 class="text-[1.75rem] font-semibold leading-[1.3] text-[var(--text-primary)]">Featured Projects</h2>
+                <p class="text-sm text-[var(--text-secondary)]">System architecture, outcomes, and metrics from key coursework and hackathon builds.</p>
+            </div>
+            <div id="projects-grid" class="grid sm:grid-cols-2 gap-6"></div>
+        </section>
+
+        <!-- ================= TECHNICAL SKILLS ================= -->
+        <section class="bg-[var(--bg-tertiary)] border-y border-[var(--border)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+                <div class="space-y-2 mb-10">
+                    <p class="section-eyebrow">// stack</p>
+                    <h2 class="text-[1.75rem] font-semibold leading-[1.3] text-[var(--text-primary)]">Technical Skills</h2>
+                </div>
+                <div id="skills-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+        </section>
+
+        <!-- ================= EDUCATION & EXPERIENCE (TIMELINE) ================= -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+            <div class="space-y-2 mb-10">
+                <p class="section-eyebrow">// timeline</p>
+                <h2 class="text-[1.75rem] font-semibold leading-[1.3] text-[var(--text-primary)]">Education &amp; Experience</h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="font-mono text-sm font-bold uppercase tracking-widest text-[var(--accent-text)] mb-6">Education</h3>
+                    <div id="education-list" class="space-y-6"></div>
+                </div>
+                <div>
+                    <h3 class="font-mono text-sm font-bold uppercase tracking-widest text-[var(--accent-text)] mb-6">Experience &amp; Leadership</h3>
+                    <div id="experience-list" class="space-y-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA BAND ================= -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+            <div class="card p-8 sm:p-12 text-center space-y-6" style="border-color: var(--accent);">
+                <p class="mono-muted">$ contact --about 'Summer 2026 internship'</p>
+                <h2 class="text-[1.75rem] sm:text-3xl font-semibold leading-[1.3] text-[var(--text-primary)]">Interested in working together?</h2>
+                <p class="text-[var(--text-secondary)] max-w-xl mx-auto text-sm leading-relaxed">
+                    I'm seeking a software engineering or cybersecurity internship for Summer 2026.
+                    Let's connect — or explore the business resources page for website solutions.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="#" id="cta-email" class="btn btn-primary">Email Me</a>
+                    <a href="#" id="cta-linkedin" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn</a>
+                    <a href="business.html" class="btn btn-outline">Business Resources</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shared Footer (rendered by site-config.js) -->
+    <div id="site-footer"></div>
+
+    <!-- Site config + renderers -->
+    <script src="assets/js/site-config.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cfg = window.SITE_CONFIG;
+
+            /* Nav + footer + theme toggle */
+            window.renderNav();
+            window.renderFooter();
+
+            /* External links (all open in new tabs where external) */
+            document.getElementById('resume-download').href = cfg.resumePdf;
+            document.getElementById('github-link').href = cfg.social.github;
+            document.getElementById('linkedin-link').href = cfg.social.linkedin;
+            document.getElementById('hero-email').href = 'mailto:' + cfg.email;
+            document.getElementById('hero-phone').href = 'tel:' + cfg.phone;
+            document.getElementById('cta-email').href = 'mailto:' + cfg.email;
+            document.getElementById('cta-linkedin').href = cfg.social.linkedin;
+
+            /* Core stats */
+            var stats = [
+                { label: 'status', value: cfg.terminal.status, type: 'str' },
+                { label: 'location', value: cfg.terminal.location, type: 'str' },
+                { label: 'focus', value: cfg.terminal.focus, type: 'str' },
+                { label: 'languages', value: cfg.terminal.languages.join(', '), type: 'arr' }
+            ];
+            document.getElementById('core-stats').innerHTML = stats.map(function (s) {
+                return '<div class="flex gap-4">' +
+                    '<span class="font-mono text-sm text-[var(--accent-text)] shrink-0">' + s.label + '</span>' +
+                    '<span class="font-mono text-sm text-[var(--text-secondary)] leading-relaxed">' + s.value + '</span>' +
+                    '</div>';
+            }).join('');
+
+            /* Mock terminal */
+            var t = cfg.terminal;
+            var term =
+                '<div><span class="t-prompt">~$</span> <span class="t-cmd">./profile.sh --status</span></div>' +
+                '<div><span class="t-key">status:</span> <span class="t-str">"' + t.status + '"</span></div>' +
+                '<div><span class="t-key">location:</span> <span class="t-str">"' + t.location + '"</span></div>' +
+                '<div><span class="t-key">focus:</span> <span class="t-str">"' + t.focus + '"</span></div>' +
+                '<div class="mt-2"><span class="t-prompt">~$</span> <span class="t-cmd">cat languages.txt</span></div>' +
+                '<div><span class="t-arr">[</span> ' + t.languages.map(function (l) {
+                    return '<span class="t-str">' + l + '</span>';
+                }).join(', ') + ' <span class="t-arr">]</span></div>' +
+                '<div class="mt-2"><span class="t-prompt">~$</span> <span class="t-cmd">echo $AVAILABILITY</span></div>' +
+                '<div><span class="t-key">output:</span> <span class="t-str">"Open to Summer 2026 internships"</span></div>' +
+                '<div class="mt-2"><span class="t-prompt">~$</span> <span class="t-cursor"></span></div>';
+            document.getElementById('terminal-body').innerHTML = term;
+
+            /* Featured projects — 2x2 grid */
+            var projectsHtml = cfg.resume.projects.map(function (proj, i) {
+                var links = '';
+                if (proj.links.github) {
+                    links += '<a href="' + proj.links.github + '" target="_blank" rel="noopener" class="btn btn-outline btn-sm">GitHub ↗</a>';
+                }
+                if (proj.links.demo) {
+                    links += '<a href="' + proj.links.demo + '" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Live Demo ↗</a>';
+                }
+                return '<div class="card card-lift p-6 flex flex-col gap-4">' +
+                    '<div class="flex items-start justify-between gap-3">' +
+                    '<h3 class="text-[1.25rem] font-medium leading-[1.4] text-[var(--text-primary)]">' + proj.title + '</h3>' +
+                    '<span class="font-mono text-xs text-[var(--text-secondary)] shrink-0">' + String(i + 1).padStart(2, '0') + '</span>' +
+                    '</div>' +
+                    '<div class="flex flex-wrap gap-2">' +
+                    proj.tech.map(function (t) { return '<span class="pill">' + t + '</span>'; }).join('') +
+                    '</div>' +
+                    '<ul class="space-y-2 flex-grow">' +
+                    proj.points.map(function (pt) {
+                        return '<li class="flex items-start gap-2.5 text-sm text-[var(--text-secondary)]">' +
+                            '<span class="text-[var(--terminal-green)] font-bold mt-0.5">›</span>' +
+                            '<span class="leading-relaxed">' + pt + '</span></li>';
+                    }).join('') +
+                    '</ul>' +
+                    (links ? '<div class="flex flex-wrap gap-3 mt-1">' + links + '</div>' : '') +
+                    '</div>';
+            }).join('');
+
+            /* 4th card — "more on GitHub" to complete the 2x2 grid */
+            var moreCard =
+                '<a href="' + cfg.social.github + '" target="_blank" rel="noopener" class="card card-lift p-6 flex flex-col items-center justify-center gap-3 text-center">' +
+                '<span class="font-mono text-sm text-[var(--accent-text)]">$ git push origin more</span>' +
+                '<span class="text-sm text-[var(--text-secondary)]">More experiments &amp; coursework on GitHub</span>' +
+                '<span class="btn btn-outline btn-sm">View GitHub ↗</span>' +
+                '</a>';
+
+            document.getElementById('projects-grid').innerHTML = projectsHtml + moreCard;
+
+            /* Technical skills taxonomy */
+            document.getElementById('skills-grid').innerHTML = cfg.resume.skills.map(function (group) {
+                return '<div class="card p-5 space-y-4">' +
+                    '<h3 class="font-mono text-sm font-bold uppercase tracking-widest text-[var(--accent-text)]">' + group.category + '</h3>' +
+                    '<div class="flex flex-wrap gap-2">' +
+                    group.items.map(function (item) {
+                        return '<span class="pill">' + item + '</span>';
+                    }).join('') +
+                    '</div></div>';
+            }).join('');
+
+            /* Education timeline */
+            document.getElementById('education-list').innerHTML = cfg.resume.education.map(function (edu) {
+                return '<div class="timeline-item">' +
+                    '<span class="timeline-dot"></span>' +
+                    '<div class="card p-5 space-y-2">' +
+                    '<div class="flex flex-wrap items-start justify-between gap-2">' +
+                    '<h3 class="font-medium text-[var(--text-primary)]">' + edu.degree + '</h3>' +
+                    '<span class="font-mono text-xs text-[var(--text-secondary)]">' + edu.period + '</span>' +
+                    '</div>' +
+                    '<p class="font-mono text-sm text-[var(--accent-text)]">' + edu.school + '</p>' +
+                    '<p class="text-sm text-[var(--text-secondary)] leading-relaxed">' + edu.details + '</p>' +
+                    '</div></div>';
+            }).join('');
+
+            /* Experience & leadership timeline */
+            document.getElementById('experience-list').innerHTML = cfg.resume.experience.map(function (job) {
+                return '<div class="timeline-item">' +
+                    '<span class="timeline-dot"></span>' +
+                    '<div class="card p-5 space-y-2">' +
+                    '<div class="flex flex-wrap items-start justify-between gap-2">' +
+                    '<h3 class="font-medium text-[var(--text-primary)]">' + job.role + '</h3>' +
+                    '<span class="font-mono text-xs text-[var(--text-secondary)]">' + job.period + '</span>' +
+                    '</div>' +
+                    '<p class="font-mono text-sm text-[var(--accent-text)]">' + job.company + '</p>' +
+                    '<ul class="space-y-1.5">' +
+                    job.points.map(function (pt) {
+                        return '<li class="flex items-start gap-2 text-sm text-[var(--text-secondary)]">' +
+                            '<span class="text-[var(--terminal-green)] font-bold mt-0.5">›</span><span class="leading-relaxed">' + pt + '</span></li>';
+                    }).join('') +
+                    '</ul>' +
+                    '</div></div>';
+            }).join('');
+        });
+    </script>
+</body>
+</html>

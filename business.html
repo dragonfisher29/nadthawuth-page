@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Services Catalog | Nadthawuth</title>
+    <meta name="description" content="Web development services catalog for Malaysian MSMEs — packages, pricing, add-ons, and 0% commission web solutions.">
+
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Fira Code', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <style>
+        .gradient-text {
+            background: linear-gradient(90deg, var(--accent), var(--accent-text));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .package-card {
+            position: relative;
+            overflow: hidden;
+        }
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--terminal-green));
+        }
+        .pkg-01::before { background: linear-gradient(90deg, #10b981, #34d399); }
+        .pkg-02::before { background: linear-gradient(90deg, #3b82f6, #60a5fa); }
+        .pkg-03::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <div class="h-1 bg-gradient-to-r from-[var(--accent)] via-[var(--accent-text)] to-[var(--terminal-green)] fixed top-0 inset-x-0 z-50"></div>
+
+    <div id="site-nav"></div>
+
+    <main class="flex-grow">
+
+        <!-- ================= HERO ================= -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pt-32 pb-14 text-center">
+            <p class="section-eyebrow mb-4">~/business/services-catalog</p>
+            <span class="inline-flex items-center gap-2 font-mono text-xs font-semibold text-[var(--terminal-green)] border border-[var(--terminal-green)]/40 rounded px-3 py-1.5 bg-[var(--terminal-green)]/10 mb-5">
+                For Malaysian MSMEs · 0% Commission
+            </span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-[var(--text-primary)] mb-4">
+                Web Development <span class="gradient-text">Services Catalog</span>
+            </h1>
+            <p class="text-lg text-[var(--text-secondary)] max-w-2xl mx-auto leading-relaxed">
+                Choose the perfect website package for your business, then customize with optional add-ons.
+                Transparent pricing, no hidden fees — and you keep 100% of every order.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3 mt-7">
+                <a href="#step1" class="btn btn-primary">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    View Packages
+                </a>
+                <a href="#" id="hero-wa" target="_blank" rel="noopener" class="btn btn-outline">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    WhatsApp Consultation
+                </a>
+            </div>
+        </section>
+
+        <!-- ================= STEP 1: MAIN PACKAGES ================= -->
+        <section id="step1" class="bg-[var(--bg-tertiary)] border-y border-[var(--border)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+                <div class="space-y-2 mb-3">
+                    <p class="section-eyebrow">Step 01</p>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]">Choose Your Main Website Package</h2>
+                    <p class="text-sm text-[var(--text-secondary)] max-w-2xl">
+                        Select the foundation that best fits your business. Every package is built mobile-first and hosted on fast global servers.
+                    </p>
+                </div>
+
+                <div id="packages-grid" class="grid md:grid-cols-3 gap-6 mt-10"></div>
+
+                <!-- Domain Note -->
+                <div id="domain-note" class="mt-10 card p-5 sm:p-6 border-l-4" style="border-left-color: var(--accent);"></div>
+            </div>
+        </section>
+
+        <!-- ================= STEP 2: ADD-ONS & EXTRAS ================= -->
+        <section id="step2" class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+            <div class="space-y-2 mb-3">
+                <p class="section-eyebrow">Step 02 <span class="text-[var(--text-secondary)] normal-case tracking-normal font-normal">· Optional</span></p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]">Add-Ons &amp; Extras</h2>
+                <p class="text-sm text-[var(--text-secondary)] max-w-2xl">
+                    Enhance your website with powerful add-ons. Pick only what you need — mix and match freely.
+                </p>
+            </div>
+
+            <div id="addons-grid" class="mt-10 space-y-8"></div>
+        </section>
+
+        <!-- ================= PRICING SUMMARY / FAQ STRIP ================= -->
+        <section class="bg-[var(--bg-tertiary)] border-y border-[var(--border)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16">
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="card p-6 text-center space-y-3">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-[var(--accent-soft)] flex items-center justify-center">
+                            <span class="text-2xl">💸</span>
+                        </div>
+                        <h3 class="font-bold text-[var(--text-primary)]">0% Commission Forever</h3>
+                        <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                            Unlike Grab, Foodpanda, or Shopee — every ringgit from orders goes straight to you. No per-order cuts, ever.
+                        </p>
+                    </div>
+                    <div class="card p-6 text-center space-y-3">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-[var(--accent-soft)] flex items-center justify-center">
+                            <span class="text-2xl">⚡</span>
+                        </div>
+                        <h3 class="font-bold text-[var(--text-primary)]">Fast Global Hosting</h3>
+                        <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                            Deployed on Cloudflare's 300+ edge locations worldwide. Your page loads in under 1 second anywhere.
+                        </p>
+                    </div>
+                    <div class="card p-6 text-center space-y-3">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-[var(--accent-soft)] flex items-center justify-center">
+                            <span class="text-2xl">🔧</span>
+                        </div>
+                        <h3 class="font-bold text-[var(--text-primary)]">Free Domain Setup</h3>
+                        <p class="text-sm text-[var(--text-secondary)] leading-relaxed">
+                            Already own a domain? We handle the DNS linking and SSL certificate setup at zero extra charge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+            <div class="card p-8 sm:p-12 text-center space-y-6" style="border-color: var(--accent);">
+                <p class="mono-muted">$ web-setup --start</p>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-[var(--text-primary)]">Ready to launch your business website?</h2>
+                <p class="text-[var(--text-secondary)] max-w-xl mx-auto text-sm leading-relaxed">
+                    Tell us which package and add-ons you want, and we'll get back within 24 hours with a timeline.
+                    Free consultation — no obligation.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="#" id="cta-wa" target="_blank" rel="noopener" class="btn btn-primary">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        Start via WhatsApp
+                    </a>
+                    <a href="mailto:nadthawuth@gmail.com" class="btn btn-outline">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        Email Enquiry
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="assets/js/site-config.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var cfg = window.SITE_CONFIG;
+
+            window.renderNav();
+            window.renderFooter();
+
+            var wa = cfg.whatsappLink();
+            document.getElementById('hero-wa').href = wa;
+            document.getElementById('cta-wa').href = wa;
+
+            /* Tag color classes (matching existing theme.css accent system with semantic names) */
+            var tagStyles = {
+                emerald: {
+                    badge: 'border-emerald-500/40 text-emerald-400 bg-emerald-500/10',
+                    dot: 'bg-emerald-400'
+                },
+                blue: {
+                    badge: 'border-blue-500/40 text-blue-400 bg-blue-500/10',
+                    dot: 'bg-blue-400'
+                },
+                purple: {
+                    badge: 'border-purple-500/40 text-purple-400 bg-purple-500/10',
+                    dot: 'bg-purple-400'
+                }
+            };
+
+            /* ---------- Step 1: Packages ---------- */
+            document.getElementById('packages-grid').innerHTML = cfg.packages.map(function (pkg) {
+                var style = tagStyles[pkg.tagColor] || tagStyles.emerald;
+                var pkgClass = 'pkg-' + pkg.packageNumber;
+                var upfrontExtra = pkg.upfrontFeeNote ? '<div class="text-xs text-[var(--text-secondary)] mt-1">' + pkg.upfrontFeeNote + '</div>' : '';
+                var yearlyExtra = pkg.yearlyRenewalNote ? '<div class="text-xs text-[var(--text-secondary)] mt-1">' + pkg.yearlyRenewalNote + '</div>' : '';
+                return (
+                    '<div class="card card-lift package-card ' + pkgClass + ' p-6 flex flex-col">' +
+                        '<div class="flex items-start justify-between gap-3 mb-4">' +
+                            '<span class="font-mono text-xs font-bold text-[var(--text-secondary)]">Package ' + pkg.packageNumber + '</span>' +
+                            '<span class="shrink-0 inline-block px-2 py-0.5 text-[10px] font-bold tracking-wide uppercase border rounded ' + style.badge + '">' + pkg.tag + '</span>' +
+                        '</div>' +
+                        '<h3 class="text-lg font-bold text-[var(--text-primary)] leading-snug mb-4">' + pkg.title + '</h3>' +
+
+                        '<div class="space-y-4 mb-5 pb-5 border-b border-[var(--border)]">' +
+                            '<div>' +
+                                '<div class="text-[11px] font-mono uppercase tracking-wider text-[var(--text-secondary)] mb-1.5">Upfront Fee</div>' +
+                                '<div class="text-2xl font-extrabold text-[var(--text-primary)] leading-tight">' + pkg.upfrontFee + '</div>' +
+                                upfrontExtra +
+                            '</div>' +
+                            '<div>' +
+                                '<div class="text-[11px] font-mono uppercase tracking-wider text-[var(--text-secondary)] mb-1.5">Yearly Renewal</div>' +
+                                '<div class="text-base font-semibold text-[var(--accent-text)] leading-tight">' + pkg.yearlyRenewal + '</div>' +
+                                yearlyExtra +
+                            '</div>' +
+                        '</div>' +
+
+                        '<p class="text-sm text-[var(--text-secondary)] leading-relaxed mb-4">' + pkg.description + '</p>' +
+
+                        '<div class="text-[11px] font-mono uppercase tracking-wider text-[var(--text-secondary)] mb-2">What\'s included</div>' +
+                        '<ul class="space-y-2 flex-grow mb-6">' +
+                            pkg.features.map(function (f) {
+                                return '<li class="flex items-start gap-2.5 text-sm text-[var(--text-secondary)]">' +
+                                    '<span class="text-[var(--terminal-green)] font-bold mt-0.5 shrink-0">›</span>' +
+                                    '<span class="leading-relaxed">' + f + '</span></li>';
+                            }).join('') +
+                        '</ul>' +
+
+                        '<a href="' + wa + '" target="_blank" rel="noopener" class="btn btn-primary btn-sm w-full">' +
+                            'Enquire about Package ' + pkg.packageNumber +
+                        '</a>' +
+                    '</div>'
+                );
+            }).join('');
+
+            /* ---------- Domain Note ---------- */
+            document.getElementById('domain-note').innerHTML =
+                '<div class="flex items-start gap-4">' +
+                    '<div class="shrink-0 w-10 h-10 rounded-lg bg-[var(--accent-soft)] flex items-center justify-center">' +
+                        '<svg class="w-5 h-5 text-[var(--accent-text)]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>' +
+                    '</div>' +
+                    '<div class="flex-grow space-y-1">' +
+                        '<h4 class="font-semibold text-[var(--text-primary)] text-sm">Note on Custom Domains</h4>' +
+                        '<p class="text-sm text-[var(--text-secondary)] leading-relaxed">' + cfg.domainNote + '</p>' +
+                    '</div>' +
+                '</div>';
+
+            /* ---------- Step 2: Add-Ons ---------- */
+            document.getElementById('addons-grid').innerHTML = cfg.addons.map(function (group) {
+                var servicesHtml = group.services.map(function (svc) {
+                    return (
+                        '<div class="card card-lift p-5 sm:p-6 flex flex-col sm:flex-row gap-5 sm:gap-6">' +
+                            '<div class="flex-grow space-y-3">' +
+                                '<div class="flex items-start justify-between gap-4 flex-wrap">' +
+                                    '<h4 class="font-bold text-[var(--text-primary)]">' + svc.name + '</h4>' +
+                                    '<div class="shrink-0 text-lg font-extrabold gradient-text">' + svc.price + '</div>' +
+                                '</div>' +
+                                '<p class="text-sm text-[var(--text-secondary)] leading-relaxed">' + svc.description + '</p>' +
+                                '<ul class="grid sm:grid-cols-2 gap-x-6 gap-y-2 pt-2">' +
+                                    svc.features.map(function (f) {
+                                        return '<li class="flex items-center gap-2 text-xs text-[var(--text-secondary)]">' +
+                                            '<span class="text-[var(--terminal-green)] font-bold shrink-0">✓</span>' +
+                                            '<span class="leading-relaxed">' + f + '</span></li>';
+                                    }).join('') +
+                                '</ul>' +
+                            '</div>' +
+                            '<div class="sm:w-40 sm:shrink-0 sm:flex sm:flex-col sm:justify-end sm:items-end sm:border-l sm:border-[var(--border)] sm:pl-6">' +
+                                '<a href="' + wa + '" target="_blank" rel="noopener" class="btn btn-outline btn-sm w-full sm:w-auto">' +
+                                    'Add this' +
+                                '</a>' +
+                            '</div>' +
+                        '</div>'
+                    );
+                }).join('');
+
+                return (
+                    '<div class="space-y-4">' +
+                        '<div class="flex items-center gap-3">' +
+                            '<span class="text-2xl">' + group.categoryIcon + '</span>' +
+                            '<div>' +
+                                '<h3 class="font-bold text-[var(--text-primary)]">' + group.category + '</h3>' +
+                                '<div class="h-0.5 w-12 mt-1 rounded-full bg-gradient-to-r from-[var(--accent)] to-[var(--terminal-green)]"></div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="space-y-4">' + servicesHtml + '</div>' +
+                    '</div>'
+                );
+            }).join('');
+        });
+    </script>
+</body>
+</html>

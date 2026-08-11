@@ -1,0 +1,293 @@
+/* ============================================================
+ * nadthawuth.dev — Design System
+ * "Developer Terminal meets High-End Technical Publication"
+ * ------------------------------------------------------------
+ * Dark mode is the default; light mode is a clean, high-contrast
+ * alternative. All theme tokens are CSS custom properties toggled
+ * via `data-theme` on <html> (see inline init script in each page).
+ * ============================================================ */
+
+:root,
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-primary: #0a0d12;   /* page canvas */
+  --bg-secondary: #161b22;  /* cards, code, modals */
+  --bg-tertiary: #10151c;   /* alternating section bands */
+  --header-bg: rgba(10, 13, 18, 0.85);
+  --text-primary: #f0f6fc;
+  --text-secondary: #8b949e;
+  --accent: #3b82f6;
+  --accent-strong: #2563eb;
+  --accent-soft: rgba(59, 130, 246, 0.1);
+  --accent-text: #60a5fa;
+  --terminal-green: #10b981;
+  --border: #30363d;
+
+  --btn-primary-text: #ffffff;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
+
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --header-bg: rgba(250, 250, 250, 0.9);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --accent-text: #1d4ed8;
+  --terminal-green: #059669;
+  --border: #e2e8f0;
+
+  --btn-primary-text: #ffffff;
+  --shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+/* ---------- Base ---------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-bar {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+section {
+  scroll-margin-top: 5rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Accessible keyboard focus (WCAG 2.1 AA) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Typography helpers ---------- */
+
+.gradient-text {
+  background: linear-gradient(90deg, var(--accent), var(--accent-text));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.section-eyebrow {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.mono-muted {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: filter 0.15s ease, transform 0.15s ease, border-color 0.15s ease,
+    color 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--btn-primary-text);
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+}
+
+.btn-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 0.8125rem;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-hover:hover {
+  border-color: var(--accent);
+}
+
+.card-lift:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Tech stack pills ---------- */
+
+.pill {
+  display: inline-block;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+/* ---------- Terminal widget ---------- */
+
+.terminal {
+  background: #0a0d12;
+  border: 1px solid #30363d;
+  border-radius: 10px;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.7;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+}
+
+.terminal-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+}
+
+.terminal-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+}
+
+.terminal-body {
+  padding: 14px 16px;
+  color: #c9d1d9;
+  overflow-x: auto;
+}
+
+.terminal .t-prompt {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.terminal .t-cmd {
+  color: #f0f6fc;
+}
+
+.terminal .t-key {
+  color: #8b949e;
+}
+
+.terminal .t-str {
+  color: #10b981;
+}
+
+.terminal .t-arr {
+  color: #f0883e;
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 16px;
+  background: #10b981;
+  vertical-align: text-bottom;
+  animation: terminal-blink 1s step-end infinite;
+}
+
+@keyframes terminal-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ---------- Timeline ---------- */
+
+.timeline-item {
+  position: relative;
+  padding-left: 24px;
+  border-left: 2px solid var(--border);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -6px;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* ---------- Theme toggle ---------- */
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
