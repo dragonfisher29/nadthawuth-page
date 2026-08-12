@@ -21,13 +21,9 @@ window.SITE_CONFIG = {
   lastUpdated: R.lastUpdated,
 
   email: R.email,
-  phone: R.phone,
 
   /* Downloadable resume (drop your resume PDF at this path) */
   resumePdf: R.resumePdf,
-
-  /* WhatsApp */
-  whatsapp: R.whatsapp,
 
   /* Social / external profile links */
   social: R.social,
@@ -57,14 +53,6 @@ window.SITE_CONFIG = {
 };
 
 /* ============================================================
- * Helpers
- * ============================================================ */
-window.SITE_CONFIG.whatsappLink = function () {
-  var cfg = window.SITE_CONFIG;
-  return "https://wa.me/" + cfg.whatsapp.number + "?text=" + encodeURIComponent(cfg.whatsapp.message);
-};
-
-/* ============================================================
  * Shared UI — navigation bar, theme toggle & footer
  * ============================================================ */
 (function () {
@@ -89,15 +77,15 @@ window.SITE_CONFIG.whatsappLink = function () {
     if (!el) return;
     var cfg = window.SITE_CONFIG;
     var active = activePage();
-    var wa = cfg.whatsappLink();
 
     var linkItems =
       navLinkItem("index.html", "About Me", active === "index.html") +
       navLinkItem("business.html", "Services", active === "business.html") +
       navLinkItem("demos.html", "Demos", active === "demos.html");
 
+    var mailto = 'mailto:' + cfg.email;
     var cta =
-      '<a href="' + wa + '" target="_blank" rel="noopener" class="btn btn-primary btn-sm ml-2">Contact</a>';
+      '<a href="' + mailto + '" class="btn btn-primary btn-sm ml-2">Contact</a>';
 
     var themeToggle =
       '<button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme" title="Toggle color theme">' +
@@ -113,7 +101,7 @@ window.SITE_CONFIG.whatsappLink = function () {
     var mobileMenu =
       '<div id="mobile-menu" class="md:hidden hidden border-t border-[var(--border)] px-4 py-3 space-y-1">' +
       linkItems +
-      '<a href="' + wa + '" target="_blank" rel="noopener" class="btn btn-primary w-full mt-2">Contact</a>' +
+      '<a href="' + mailto + '" class="btn btn-primary w-full mt-2">Contact</a>' +
       "</div>";
 
     el.innerHTML =
@@ -172,7 +160,6 @@ window.SITE_CONFIG.whatsappLink = function () {
     var el = document.getElementById("site-footer");
     if (!el) return;
     var cfg = window.SITE_CONFIG;
-    var wa = cfg.whatsappLink();
 
     var footLink = "block text-sm text-[var(--text-secondary)] hover:text-[var(--accent)] transition-colors";
     var footHead = "font-mono text-xs font-bold uppercase tracking-widest text-[var(--accent-text)] mb-3";
@@ -205,7 +192,6 @@ window.SITE_CONFIG.whatsappLink = function () {
       '<a href="' + cfg.social.github + '" target="_blank" rel="noopener" class="' + footLink + '">GitHub ↗</a>' +
       '<a href="' + cfg.social.linkedin + '" target="_blank" rel="noopener" class="' + footLink + '">LinkedIn ↗</a>' +
       '<a href="mailto:' + cfg.email + '" class="' + footLink + ' truncate">' + cfg.email + "</a>" +
-      '<a href="' + wa + '" target="_blank" rel="noopener" class="' + footLink + '">WhatsApp ↗</a>' +
       "</div></div>" +
 
       /* Resume */

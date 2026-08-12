@@ -28,16 +28,9 @@ window.RESUME_CONSTANTS = {
 
   /* Contact */
   email: "nadthawuth@gmail.com",
-  phone: "+447733529901",
 
   /* Downloadable resume (drop your resume PDF at this path) */
   resumePdf: "assets/resume.pdf",
-
-  /* WhatsApp */
-  whatsapp: {
-    number: "447733529901",
-    message: "Hi Nadthawuth! I saw your portfolio and would like to connect."
-  },
 
   /* Social / external profile links */
   social: {
